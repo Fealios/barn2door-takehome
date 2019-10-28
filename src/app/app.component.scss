@@ -1,0 +1,52 @@
+#title-search-outer {
+    grid-template-columns: 30% 40% 30%;
+    display: grid;
+}
+
+#title-search-inner {
+    grid-column: 2/3;
+    text-align: center;
+}
+
+#search-holder input {
+    width: 100%
+}
+
+#outer {
+    padding: 15px;
+}
+
+.item-container {
+    font-family: 'Montserrat', sans-serif;
+    margin: 20px;
+    display: inline-flex;
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    max-height: 500px;
+    overflow-y: scroll;
+
+    .item-image-container {
+        display: flex;
+        border: solid;
+        width: 100px;
+        height: 100px;
+
+        .item-image {
+            max-width: 100px;
+            max-height: 100px;
+        }
+    }
+
+    .details-holder {
+        .details-header {
+            font-style: italic;
+        }
+        
+        width: 100%;
+    }
+}
+
+.item-container:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

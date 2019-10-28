@@ -1,3 +1,32 @@
-<h1>Search your items</h1>
+<div id="title-search-outer">
+    <div id="title-search-inner">
+        <h1>Search your items</h1>
+        <div id="search-holder">
+            <input type="text" (change)="search()" [(ngModel)]="searchTerm">
+        </div>
+    </div>
+</div>
 
-<input type="text" (change)="search()" [(ngModel)]="searchTerm">
+
+<div id="outer">
+    <div class="item-container" *ngFor="let item of results">
+        <div>
+            <div class="title-holder">
+                <h3 class="item-title">{{item?.title}}</h3>
+            </div>
+            <div class="item-image-container">
+                <img class="item-image" [src]="item.img" alt="">
+            </div>
+        </div>
+
+        <div class="details-holder">
+            <h4 class="details-header">Details:</h4>
+            <div *ngFor="let cat of item.categories" class="category">
+                <p>{{cat?.name}}</p>
+                <div *ngIf="cat.subcategory">
+                    <p>{{cat.subcategory?.name}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

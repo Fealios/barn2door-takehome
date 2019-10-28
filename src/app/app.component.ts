@@ -6,7 +6,7 @@ import { ObjectUtilities } from './utilities/object.util';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
   title = 'barn2door';
@@ -25,6 +25,7 @@ export class AppComponent implements OnInit {
       }
 
       this.allData = modified;
+      console.log(this.allData);
     });
   }
 
