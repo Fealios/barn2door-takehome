@@ -51,4 +51,9 @@ export class AppComponent implements OnInit {
     }
     this.results = res;
   }
+
+  public clearResults(): void {
+    this.results = [];
+    this.searchTerm = '';
+  }
 }
